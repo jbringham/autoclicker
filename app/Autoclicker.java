@@ -1,6 +1,6 @@
 package app;
 
-import gui.AutoClicker;
+import gui.AutoTask;
 
 /**
  * To be written.
@@ -16,7 +16,7 @@ public class Autoclicker {
    * @param args Unused
    */
   public static void main(String[] args) {
-    new AutoClicker();
+    new AutoTask();
   }
 
 }
