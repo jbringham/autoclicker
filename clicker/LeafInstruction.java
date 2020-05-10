@@ -21,7 +21,7 @@ public class LeafInstruction extends AbstractInstruction implements Instruction 
   public LeafInstruction(Type type, Point point, int i, String string) {
     super(type, point, i, string);
   }
- 
+  
   @Override
   public void execute(Robot robot) {
     switch (action) {
