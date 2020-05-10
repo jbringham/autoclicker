@@ -11,7 +11,7 @@ import java.awt.Robot;
  * @author Jacob Bringham
  * @version 3/26/2020
  */
-public interface Instruction
+public interface Action
 {
 
   /**

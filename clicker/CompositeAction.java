@@ -12,13 +12,13 @@ import java.util.Collection;
  * @author Jacob Bringham
  * @version 3/26/2020
  */
-public class CompositeInstruction implements Instruction {
+public class CompositeAction implements Action {
 
-  private Collection<Instruction> instructions;
+  private Collection<Action> instructions;
 
-  public CompositeInstruction(Instruction... instructions) {
+  public CompositeAction(Action... instructions) {
     // TODO: Consider using different data structure
-    this.instructions = new ArrayList<Instruction>();
+    this.instructions = new ArrayList<Action>();
     // TODO: Write test to ensure order is preserved
     this.instructions.addAll(Arrays.asList(instructions));
   }
@@ -28,7 +28,7 @@ public class CompositeInstruction implements Instruction {
    * 
    * @param i Instruction to add
    */
-  public void add(Instruction i) {
+  public void add(Action i) {
     instructions.add(i);
   }
 
@@ -37,14 +37,14 @@ public class CompositeInstruction implements Instruction {
    * 
    * @param i Instruction to remove
    */
-  public void remove(Instruction i) {
+  public void remove(Action i) {
     instructions.remove(i);
   }
 
   @Override
   public void execute(Robot robot) {
     // TODO: Figure out how to do concurrent actions
-    for (Instruction instruction : instructions) {
+    for (Action instruction : instructions) {
       instruction.execute(robot);
     }
   }

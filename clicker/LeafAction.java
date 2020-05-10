@@ -5,7 +5,7 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
-public class LeafInstruction extends AbstractInstruction implements Instruction {
+public class LeafAction extends AbstractAction implements Action {
 
   /**
    * Constructs a LeafInstruction with the initialized fields.
@@ -14,11 +14,11 @@ public class LeafInstruction extends AbstractInstruction implements Instruction 
    * @param location Location the action will act on
    * @param time The length of the time action will act over
    */
-  public LeafInstruction(Type action, Point location, int time) {
+  public LeafAction(Type action, Point location, int time) {
     super(action, location, time);
   }
 
-  public LeafInstruction(Type type, Point point, int i, String string) {
+  public LeafAction(Type type, Point point, int i, String string) {
     super(type, point, i, string);
   }
   

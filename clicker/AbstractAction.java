@@ -8,7 +8,7 @@ import java.awt.Point;
  * @author Jacob Bringham
  * @version 3/26/2020
  */
-public class AbstractInstruction
+public class AbstractAction
 {
 
 
@@ -33,7 +33,7 @@ public class AbstractInstruction
    * @param time
    * @param text
    */
-  public AbstractInstruction(Type action, Point location, int time, String text)
+  public AbstractAction(Type action, Point location, int time, String text)
   {
     this.action = action;
     this.location = location;
@@ -48,7 +48,7 @@ public class AbstractInstruction
    * @param location
    * @param time
    */
-  public AbstractInstruction(Type action, Point location, int time)
+  public AbstractAction(Type action, Point location, int time)
   {
     this(action, location, time, "");
   }
@@ -60,7 +60,7 @@ public class AbstractInstruction
    *          Action type, should not be wait
    * @param location
    */
-  public AbstractInstruction(Type action, Point location)
+  public AbstractAction(Type action, Point location)
   {
     this(action, location, DEFAULT_TIME);
   }
@@ -69,7 +69,7 @@ public class AbstractInstruction
    * Constructs an Instruction with the given action type.
    * @param action
    */
-  public AbstractInstruction(Type action) {
+  public AbstractAction(Type action) {
     this(action, new Point(0, 0), DEFAULT_TIME);
   }
 
