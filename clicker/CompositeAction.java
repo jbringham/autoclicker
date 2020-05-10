@@ -1,9 +1,9 @@
 package clicker;
 
 import java.awt.Robot;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedList;
 
 /**
  * Represents an instruction that is a collection of instructions that could be executed
@@ -18,7 +18,7 @@ public class CompositeAction implements Action {
 
   public CompositeAction(Action... instructions) {
     // TODO: Consider using different data structure
-    this.instructions = new ArrayList<Action>();
+    this.instructions = new LinkedList<Action>();
     // TODO: Write test to ensure order is preserved
     this.instructions.addAll(Arrays.asList(instructions));
   }
@@ -39,6 +39,13 @@ public class CompositeAction implements Action {
    */
   public void remove(Action i) {
     instructions.remove(i);
+  }
+
+  /**
+   * Removes all instructions from the CompositeInstruction.
+   */
+  public void removeAll() {
+    instructions.clear();
   }
 
   @Override
